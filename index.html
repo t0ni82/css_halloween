@@ -11,12 +11,95 @@
             margin: 0;
             padding: 0;
         }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #333;
+            color: white;
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            /* overflow: hidden; */
+            position: relative;
+            cursor: pointer;
+        }
+
+        figure {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 20px;
+            background-color: #fda03d;
+            width: 100%;
+            height: 100%;
+            transform-origin: 0 0;
+            transition: all 822ms ease-in-out;
+        }
+
+        /* TODO cambiar por .card:hover>figure */
+        .card:hover>figure {
+            top: -10%;
+            left: -10%;
+            transform: scale(0.5);
+        }
+
+
+        img {
+            width: 100%;
+        }
     </style>
 </head>
-<div class="container"></div>
 
 <body>
-
+    <div class="container">
+        <div class="card">
+            <figure>
+                <img src="images/bruja.png" alt="Bruja Piruja">
+            </figure>
+            <div class="card__title">
+                <h2>Bruja</h2>
+            </div>
+            <div class="card__content">
+                <p>Morgana, una antigua bruja, vive en la colina lanzando hechizos y guardando secretos...</p>
+            </div>
+        </div>
+        <div class="card">
+            <figure>
+                <img src="images/calabaza.png" alt="Bruja Piruja">
+            </figure>
+            <div class="card__title">
+                <h2>Jack-o'-lantern</h2>
+            </div>
+            <div class="card__content">
+                <p>Cuenta la leyenda que Jack engañó al diablo para no perder su alma...</p>
+            </div>
+        </div>
+        <div class="card">
+            <figure>
+                <img src="images/fantasma.png" alt="Bruja Piruja">
+            </figure>
+            <div class="card__title">
+                <h2>Fantasma</h2>
+            </div>
+            <div class="card__content">
+                <p>En un pequeño pueblo, Lila desapareció misteriosamente, y su espíritu vaga...</p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
