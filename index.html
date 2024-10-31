@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarjetas Halloween</title>
+
     <style>
         * {
             box-sizing: border-box;
@@ -13,6 +14,7 @@
         }
 
         body {
+            font-family: 'Creepster', cursive;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -23,7 +25,7 @@
         .container {
             height: 100vh;
             display: flex;
-            flex-direction: column;
+            /* flex-direction: column;*/
             justify-content: center;
             align-items: center;
             gap: 46px;
@@ -36,7 +38,7 @@
             justify-content:space-between;
           
             background-color: #e0e0e0d8; /* Fondo gris suave */
-            color: #4a0c0c; /* Color de texto con suficiente contraste */
+            color: #232222; /* Color de texto con suficiente contraste */
             width: 180px;
             height: 180px;
             border-radius: 20px;
@@ -44,6 +46,7 @@
             cursor: pointer;
             padding: 10px; /* Agregado padding */
             font-family: 'Creepster', cursive; /* Fuente temática de Halloween */
+            box-shadow: 0 4px 8px rgba(255, 0, 0, 0.74);
         }
 
         figure {
@@ -70,8 +73,8 @@
         }
 
         /* Estilos para alinear texto */
-        .card__title,
-        .card__content {
+        .card__title{
+
             text-align: right; /* Alinear texto a la izquierda */
         }
 
