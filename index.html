@@ -13,7 +13,6 @@
         }
 
         body {
-            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -22,20 +21,29 @@
         }
 
         .container {
+            height: 100vh;
             display: flex;
-            gap: 20px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 46px;
             flex-wrap: wrap;
         }
 
         .card {
-            background-color: #333;
-            color: white;
-            width: 300px;
-            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+          
+            background-color: #e0e0e0d8; /* Fondo gris suave */
+            color: #4a0c0c; /* Color de texto con suficiente contraste */
+            width: 180px;
+            height: 180px;
             border-radius: 20px;
-            /* overflow: hidden; */
             position: relative;
             cursor: pointer;
+            padding: 10px; /* Agregado padding */
+            font-family: 'Creepster', cursive; /* Fuente temática de Halloween */
         }
 
         figure {
@@ -48,20 +56,31 @@
             height: 100%;
             transform-origin: 0 0;
             transition: all 822ms ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        /* TODO cambiar por .card:hover>figure */
         .card:hover>figure {
             top: -10%;
             left: -10%;
-            transform: scale(0.5);
+            transform: scale(0.4);
         }
-
 
         img {
             width: 100%;
         }
+
+        /* Estilos para alinear texto */
+        .card__title,
+        .card__content {
+            text-align: right; /* Alinear texto a la izquierda */
+        }
+
+        h2 {
+            margin-bottom: 5px; /* Espacio entre h2 y p */
+        }
+
     </style>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet"> Fuente de Halloween -->
 </head>
 
 <body>
@@ -79,10 +98,10 @@
         </div>
         <div class="card">
             <figure>
-                <img src="images/calabaza.png" alt="Bruja Piruja">
+                <img src="images/calabaza.png" alt="Jack-o'-lantern">
             </figure>
             <div class="card__title">
-                <h2>Jack-o'-lantern</h2>
+                <h2>Jack-o'<br>-lantern</h2>
             </div>
             <div class="card__content">
                 <p>Cuenta la leyenda que Jack engañó al diablo para no perder su alma...</p>
@@ -90,7 +109,7 @@
         </div>
         <div class="card">
             <figure>
-                <img src="images/fantasma.png" alt="Bruja Piruja">
+                <img src="images/fantasma.png" alt="Fantasma">
             </figure>
             <div class="card__title">
                 <h2>Fantasma</h2>
