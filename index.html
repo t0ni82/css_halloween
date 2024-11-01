@@ -7,6 +7,8 @@
     <title>Tarjetas Halloween</title>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Rubik+Wet+Paint&display=swap');
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -14,32 +16,38 @@
         }
 
         body {
-            font-family: 'Creepster', cursive;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             background-color: black;
+            font-family: "Irish Grover", system-ui;
+            font-weight: 400;
+            font-style: normal;
         }
+
 
         header {
             width: 100%;
             text-align: center;
-            background-color: #4a4a4a;
-            color: orange;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(255, 165, 0, 0.8);
-            font-size: 2rem;
-            margin-bottom: 10px ;
+            background-color: #2e2d2d;
+            color: darkorange;
+            padding: 10px 0;
+            box-shadow: 0 4px 4px darkorange;
+            font-size: 1.6rem;
+
         }
 
         .container {
-            height: 100vh;
+
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 46px;
             flex-wrap: wrap;
+            align-content: flex-start;
+            flex:1;
         }
 
         .card {
@@ -48,14 +56,14 @@
             justify-content: space-between;
             background-color: #e0e0e0d8;
             color: #232222;
-            width: 180px;
-            height: 180px;
+            width: 200px;
+            height: 200px;
             border-radius: 20px;
             position: relative;
             cursor: pointer;
             padding: 10px;
-            font-family: 'Creepster', cursive;
-            box-shadow: 0 4px 8px rgba(255, 0, 0, 0.74);
+            /* font-family: 'Creepster', cursive; */
+            /* box-shadow: 0 4px 8px rgba(255, 0, 0, 0.74); */
         }
 
         figure {
@@ -63,7 +71,7 @@
             top: 0;
             left: 0;
             border-radius: 20px;
-            background-color: #fda03d;
+            background-color: darkorange;
             width: 100%;
             height: 100%;
             transform-origin: 0 0;
@@ -83,22 +91,45 @@
 
         .card__title {
             text-align: right;
+            padding-right: 1rem;
+            text-decoration: underline;
+        }
+
+        .card__content {
+            overflow: auto;
+            font-size: 0.8rem;
+            font-style: italic;
+
+        }
+
+        .card__content p {
+            padding: 1rem;
         }
 
         h2 {
             margin-bottom: 5px;
         }
 
+        footer {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 24px;
+            width: 100%;
+            text-align: center;
+            background-color: #2e2d2d;
+            color: darkorange;
+            padding: 10px 0;
+            box-shadow: 0 4px 4px darkorange;
+        }
     </style>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet"> Fuente de Halloween -->
+
 </head>
 
 <body>
     <header>
-        <span>Halloween Aina i Júlia</span>
+        🎃<span>Halloween Aina i Júlia</span>👻
     </header>
-
     <div class="container">
+
         <div class="card">
             <figure>
                 <img src="images/bruja.png" alt="Bruja Piruja">
@@ -132,7 +163,74 @@
                 <p>En un pequeño pueblo, Lila desapareció misteriosamente, y su espíritu vaga...</p>
             </div>
         </div>
+        <div class="card">
+            <figure>
+                <img src="images/dracula.png" alt="Fantasma">
+            </figure>
+            <div class="card__title">
+                <h2>Drácula</h2>
+            </div>
+            <div class="card__content">
+                <p>Drácula era un señor vampiro de Trancispetrania. Era vecino del Wolffy. Juntos jugaban a la
+                    pelota con las cabezas de los humanos que se alojaban el la mansión.</p>
+            </div>
+        </div>
+        <div class="card">
+            <figure>
+                <img src="images/eliza.png" alt="Fantasma">
+            </figure>
+            <div class="card__title">
+                <h2>Eliza</h2>
+            </div>
+            <div class="card__content">
+                <p>Eliza era una niña zombie que vivia en una ciudad que se llamaba Mármoles.
+                    La ciudad estaba dividida en dos partes, una para los humanos y otra para los zombies...</p>
+            </div>
+        </div>
+        <div class="card">
+            <figure>
+                <img src="images/emma.png" alt="Fantasma">
+            </figure>
+            <div class="card__title">
+                <h2>Emma</h2>
+            </div>
+            <div class="card__content">
+                <p>Había una vez una chica que siempre a las 6:30am estaba en un puente.
+                    Cuentan que su espíritu estará allí por siempre y si alguien pasa por ese puente,
+                    le pasaría algo malo.</p>
+            </div>
+        </div>
+        <div class="card">
+            <figure>
+                <img src="images/scarecrow.png" alt="Fantasma">
+            </figure>
+            <div class="card__title">
+                <h2>Scarecrow</h2>
+            </div>
+            <div class="card__content">
+                <p>Había una vez un espanta-pájaros que vigilaba el huerto de la mansión
+                    de Wolffy. Un día un cuervo le estaba comiendo un botón de la camisa y el
+                    cobró vida y se lo comío de un bocad. Desde entonces su sed de sangre es insaciable...</p>
+            </div>
+        </div>
+        <div class="card">
+            <figure>
+                <img src="images/werwolf.png" alt="Fantasma">
+            </figure>
+            <div class="card__title">
+                <h2>Wolffy</h2>
+            </div>
+            <div class="card__content">
+                <p>Cuenta la história que wolffy era un hombre-lobo. Vivía en un bosque cerca de una
+                    mansión que tenía 150000 años de antiguedad...</p>
+            </div>
+        </div>
+
     </div>
+    <footer>
+        <span> 🦇 Made with ❤️ in Petra - 2024 🍬</span>
+    </footer>
+
 </body>
 
 </html>
